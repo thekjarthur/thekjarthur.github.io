@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kwabena Arthur | Mechanical Engineer</title>
+    <link href="http://fonts.googleapis.com/css?family=Oswald:400,300|Roboto" rel="stylesheet">
+    <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  
+  <body>
+    <div class="header">
+      <div class="container">
+        <ol class="menu"> 
+          <a href="./index.html">Kwabena Arthur</a>
+          <li><a href="./contactme.html">Contact Me</a></li>
+          <li><a href="./resume.html">Resume</a></li>
+          <li><a href="./fundamentals.html">Precision Design</a></li>
+          <li><a href="./projects.html">Projects</a></li>
+        </ol>
+      </div>
+    </div>
+
+  <div id="wrap">
+    <h1><center>Practical Uploadable Problem Set #5</center></h1>
+    <h2>Peer Reviewers: Maria Ruiz, Akwasi Owusu-Akyaw</h2>
+    <center><img src="./week5/linear.png" width="700px"></center>
+    <p>The picture above shows some sketches for a linear axis. (a),(c) and (d) will be best implemented with a leadscrew design. (b) is a simple rack and pinion design. 
+    (a) Is a simple birail system. In order to prevent over constraint, the carriage will have a circular journal in for one rail and an elliptical journal for the other.
+    (b) Is a similarly simple design. The rack and pinion is easily manufactured on a laser cutter or CNC router. The main issue here is the racking problem which was analyzed <a href="./racking.html">here</a>.
+    (c) and (d) are similar designs. (c) utilizes a dove-tail which makes it more robust agains vertical loads in the z-direction. (d) is much easier to manufacture. It can be made on a router or lasercutter (for wood) or a mill for aluminum. The necessary error talerances to attain final accuracy is in the spreadsheet <a href="./week5/error.xls">here</a></p>
+
+    <center><img src="./week5/concepts.png" width="400px"><img src="./pad.png"><img src="./week5/concepts2.png" width="200px"></center>
+    <p>(a) is a wall mounted concept with a single dove-tail linear axis. It is actuated by a leadscrew and has diagonal bracing to reduce deflection. (b) has a dual-rail system, which requries two motors. Timing the motors will be crucial to the success of this system. (c) is a floor based telescoping mechanism. It also has two rails. Either a dual motor system or a cable system willl be utilized in this system. The necessary error talerances to attain final accuracy is in the spreadsheet <a href="./week3/error2.xls">here</a></p>
+    
+  <p>(b) Dual Rail Wall mounted</p>
+  <img src="./week5/cardboard.png" width="500px">
+  <table style="width:100%"><caption>FRDPARRC for Wall-Mounted Table</caption>
+    <tr><th>Functional Requirements</th><th>Design Parameters</th><th>Analysis</th><th>References</th><th>Risks</th><th>Counter-Measures</th></tr>
+
+    <tr><td>Electronically actuated</td><td>Stepper motor and leadscrew design</td><td>Torque, power analysis</td><td>PMD, datasheets</td><td>Cables, Connections</td><td>Cable ties, proper fastening</td></tr>
+    <tr><td>Support weight of items and person</td><td>Be able to handle 200N</td><td>Bearing and structure mechanics</td><td>PMD, Material Properties</td><td>~</td><td>~</td></tr>
+    <tr><td>Two positions</td><td>Two resting positions</td><td>Controls, Mechanics</td><td>PMD, Datasheets</td><td>~</td><td>~</td></tr>
+    <tr><td>Little deflection</td><td>Decrease error and deflections</td><td>Beam-bending, compliance analysis</td><td>Euler-Bernoulli Beam Theory, PMD</td><td>Increased weight, cost</td><td>Use better geometry and exercise wisdom</td></tr>
+    <tr><td>Within budget</td><td>Cost less than $100</td><td>Recycle/Re-used materials</td><td>Re-use material sites, McMaster, Amazon</td><td>Might get inferior items</td><td>Exercise caution and wisdom</td></tr>
+    <tr><td>Easy mount, portable</td><td>Detachable flat surface</td><td>Coupling design and analysis</td><td>Precision Machine Design</td><td>Reduced robustness</td><td>Better coupling design</td></tr>
+  </table>
+
+  <p>(c) Telescoping Floor Table</p>
+  <img src="./week5/cardboard2.png" width="500px"> 
+  <table style="width:100%"><caption>FRDPARRC for Floor Table</caption>
+    <tr><th>Functional Requirements</th><th>Design Parameters</th><th>Analysis</th><th>References</th><th>Risks</th><th>Counter-Measures</th></tr>
+    
+    <tr><td>Electronically actuated</td><td>Telescoping, or scissor-lift</td><td>Torque, power analysis</td><td>PMD, datasheets</td><td>Risk of injuring user</td><td>Guards, Covers can be utilized</td></tr>
+    <tr><td>Support weight of items and person</td><td>Be able to handle 200N</td><td>Bearing and structure mechanics</td><td>PMD, Material Properties</td><td>~</td><td>~</td></tr>
+    <tr><td>Two positions</td><td>To resting positions</td><td>Controls, Mechanics</td><td>PMD, Datasheets</td><td>~</td><td>~</td></tr>
+    <tr><td>Little deflection</td><td>Decrease error and deflections</td><td>Beam-bending, compliance analysis</td><td>Euler-Bernoulli Beam Theory, PMD</td><td>Increased weight, cost</td><td>Use better geometry and exercise wisdom</td></tr>
+    <tr><td>Within budget</td><td>Cost less than $100</td><td>Recycle/Re-used materials</td><td>Re-use material sites, McMaster, Amazon</td><td>Might get inferior items</td><td>Exercise caution and wisdom</td></tr>
+    <tr><td>Easily portable</td><td>Reduced weight and increase compactness</td><td>Coupling design and analysis</td><td>Precision Machine Design</td><td>Reducing weight would reduce stiffness</td><td>More rigid mechanical design</td></tr>
+  </table>
+
+  <p> The floor and wall mounted design are the most promising. I have created priliminary error apportionments for each of them: <a href="./week5/floor-error-app.xls">floor-error-app.xls</a> and <a href="./week5/wall-error-app.xls">wall-error-app.xls</a>. The floor mouned system has the same error alloted to each leg.<br>For the floor system, the only possible pinch point is the joint of the telescoping arm. A plastic cover can be placed to prevent pinching. Wires can be cleanly placed without posing a safert threat.<br> The wall mounted system has mounting requirements for walls which makes it less desirable. Plastic covers or even bellows can be added to potential pinchpoints and prolong the life of the machine. </p>
+
+
+
+
+    <br><center><h1>Brainware and Hardware<h1></center> 
+    <center><h3>Desk Concepts<h3></center>
+    I split up concepts into three parts: floor mounted, desk mounted and wall mounted. Some sketches are in the picture to below. I varied the configuration and methods of actuation. The geometry and mechanics follows from the requirements and actuation.
+    <center><img src="./week5/concepts-sticks.png"></center>
+    One idea for preload is to use springs. In a linear lead screw system, this would comprise of two screw with a spring in between them. The spring shoulg be in compression while on the leadscrew. A rotational method for this is to have two concentric gears with a spring between them. The length and strenght of the spring must be selected careful. I would the linear spring-screw method with a simple threaded rod and stage setup.
+    <center><img src="./week5/concepts.png" width="400px"><img src="./pad.png"><img src="./week5/concepts2.png" width="200px"></center>
+    <p></p>
+  </div>
+  </body>
+</html>

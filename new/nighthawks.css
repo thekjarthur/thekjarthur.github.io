@@ -1,0 +1,63 @@
+h2 {
+	color: #783018;
+}
+
+h3 {
+	color: #783018;
+}
+
+p {
+	color: #1B231F;
+}
+
+.navbar a {
+	color: #0E2733;
+}
+.navbar a.active {
+	color: #783018;
+	border-color: #783018;
+}
+
+.navbar a:hover {
+	color: #783018;
+	border-color: #783018;
+}
+
+.card a {
+	color: #1B231F;
+}
+
+.overlay {
+	background-color: #0E2733;
+}
+
+.desc {
+	color: #FFFFFF;
+	background-color: #0E2733;
+}
+
+
+
+
+
+
+/* Starry Night
+black: #010407;
+blue: #1D5881;
+yellow: #FACF3A;
+beige: #F8E288;
+teal: #A0C99A; */
+
+/* Saint Catherine
+beige: #FCE6BF;
+brown: #6C502A;
+red: #C13229;
+mauve: #656682;
+gold: #E7A659; */
+
+/*Nighthawks
+maroon: #783018;
+yellow: #ECE388;
+green: #618F72;
+blue: #0E2733;
+black: #1B231F;*/

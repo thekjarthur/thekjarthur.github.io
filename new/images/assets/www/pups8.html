@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kwabena Arthur | Mechanical Engineer</title>
+    <link href="http://fonts.googleapis.com/css?family=Oswald:400,300|Roboto" rel="stylesheet">
+    <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  
+  <body>
+    <div class="header">
+      <div class="container">
+        <ol class="menu"> 
+          <a href="./index.html">Kwabena Arthur</a>
+          <li><a href="./contactme.html">Contact Me</a></li>
+          <li><a href="./resume.html">Resume</a></li>
+          <li><a href="./fundamentals.html">Precision Design</a></li>
+          <li><a href="./projects.html">Projects</a></li>
+        </ol>
+      </div>
+    </div>
+
+  <div id="wrap">
+    <h1><center>Practical Uploadable Problem Set #8</center></h1>
+    <h2>Peer Reviewers: Maria Ruiz, Akwasi Owusu-Akyaw</h2>
+    <p></p>
+    <h3>Bill of Materials</h3>
+    <p>Preliminary B.O.M. is listed below. Only two pieces of lumber were needed. The electronics were purchased from the local electronics store.</p>
+    <p><ol>
+      <li>2 x 8 Plank of Wood (10ft)</li>
+      <li>1' x 2' x 1/4" Plywood</li>
+      <br>
+      <li>Teflon Pad</li>
+      <li>Wood Screws</li>
+      <li>Wood Glue</li>
+      <br>
+      <li>Ball Bearings</li>
+      <li>Leadscrew</li>
+      <li>Motor</li>
+      <li>Spider Coupling</li>
+      <li>Motor Driver / Microcontroller</li>
+      <li>Power Supply</li>
+    </ol></p>
+    <h3>Manufacturing Error</h3>
+    <p>Backlash/Tolerance: The bearings were supposed to have 0.001" backlash. This was going to be achieved by clamping a paper between the carriage and the bearing. The bearing would be glued and clamped in order for this 0.001" tolerance to be kept. Sliding the carriage through the bearing, the tolerance varies quite a bit. This is most likely due to manufacturing errors present in the tablesaw.</p>
+    <p>Leadscrew misalignment: a spider coupling was used in order to mitigate effects of motor-axle misalignment. When the carriage is loaded, the leadscrew had some slight deflection unaccounted for in the manufacturing. </p>
+    <p>There were some assembly issues: two screws were very eager to dig into bearing and this caused some damage to the slider.</p> 
+    <h3>Updated Designs</h3>
+    <p>The first order error budget can accessed <a href="./week6/error-budget.xlsx">here</a>. A solid model is <a href="./week7/desk_kwabena.iges">here</a></p>
+    <table style="width:100%"><caption>FRDPARRC for Wall-Mounted Table</caption>
+    <tr><th>Functional Requirements</th><th>Design Parameters</th><th>Analysis</th><th>References</th><th>Risks</th><th>Counter-Measures</th></tr>
+    <tr><td>Electronically actuated</td><td>Stepper motor and leadscrew design</td><td>Torque, power analysis</td><td>PMD, datasheets</td><td>Cables, Connections</td><td>Cable ties, proper fastening</td></tr>
+    <tr><td>Support weight of books, computer</td><td>Be able to handle 200N</td><td>Bearing and structure mechanics</td><td>PMD, Material Properties</td><td>~</td><td>~</td></tr>
+    <tr><td>Two positions</td><td>Two resting positions</td><td>Controls, Mechanics</td><td>PMD, Datasheets</td><td>~</td><td>~</td></tr>
+    <tr><td>Little deflection</td><td>Decrease error and deflections</td><td>Beam-bending, compliance analysis</td><td>Euler-Bernoulli Beam Theory, PMD</td><td>Increased weight, cost</td><td>Use better geometry and exercise wisdom</td></tr>
+    <tr><td>Within budget</td><td>Cost less than $100</td><td>Recycle/Re-used materials</td><td>Re-use material sites, McMaster, Amazon</td><td>Might get inferior items</td><td>Exercise caution and wisdom</td></tr>
+    </table>
+
+    <center><h1>Brainware and Hardware<h1></center> 
+    <p>None This Week</p>
+  </div>
+  </body>
+</html>

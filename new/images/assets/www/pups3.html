@@ -1,0 +1,104 @@
+<html>
+  
+  <head data-gwd-animation-mode="quickMode">
+    <title>Kwabena Arthur | Mechanical Engineer</title>
+    <link href="http://fonts.googleapis.com/css?family=Oswald:400,300|Roboto" rel="stylesheet">
+    <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="generator" content="Google Web Designer 1.1.2.0814">
+  </head>
+  
+  <body class="gwd-body">
+    <div class="header">
+      <div class="container">
+        <ol class="menu">
+          <a href="./index.html">Kwabena Arthur</a>
+          <li><a href="./contactme.html">Contact Me</a></li>
+          <li><a href="./resume.html">Resume</a></li>
+          <li><a href="./fundamentals.html">Precision Design</a></li>
+          <li><a href="./projects.html">Projects</a></li>
+        </ol>
+      </div>
+    </div>
+
+  <div id="wrap">
+  <h1><center>Practical Uploadable Problem Set #3</center></h1>
+  <h2>Peer Reviewers: Maria Ruiz, Akwasi Owusu-Akyaw</h2>
+  <p>This year, I will be designing, building and testing a table that can transform from sitting position to standing position. I think this project will be fun, educative and will be a great opportunity to apply new concepts of precision and error apportionment. </p><p>
+  The requirements for my desk is to be able to support the weight of a laptop, a few books and a personal leaning on it. It should be able to transform between position with the simple push of a button.</p>
+
+  <table id="t1" style="width:100%"><caption>Preliminary FRDPARRC Table for Desk</caption>
+    <tr>
+      <th>Functional Req.</th>
+      <th>Design Para.</th>
+      <th>Analysis</th>
+      <th>References</th>
+      <th>Risks</th>
+      <th>Counter-Meas.</th>
+    </tr>
+    <tr><td>Electronically actuated</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>Support weight of items and person</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>Two positions</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>Little deflection</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>Within budget</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>Easy mount, portable</td><td></td><td></td><td></td><td></td><td></td></tr>
+  </table>
+
+  <p>The loads on the table will mostly be due to books, computer and a person partially leaning on it. It will also have to support it’s own weight. Given an accuracy of 1 cm, the require stiffness is about of 20 kN/m</p>
+
+  <h3>Strategies:</h3>
+  <p>Strategy 1: Wall mounted</p>
+  <img src="./week3/tab1.jpeg" width="120px" style="float:left;padding-right:20px"> 
+  This strategy is to have a mount attached to the wall and some sort of vertical actuation to allow the table to move up and down the wall. Wall mounting would be good though it would require wall modifications for secure attachment.
+
+  <table style="width:100%"><caption>FRDPARRC for Wall-Mounted Table</caption>
+    <tr><th>Functional Requirements</th><th>Design Parameters</th><th>Analysis</th><th>References</th><th>Risks</th><th>Counter-Measures</th></tr>
+
+    <tr><td>Electronically actuated</td><td>Stepper motor and leadscrew design</td><td>Torque, power analysis</td><td>PMD, datasheets</td><td>Cables, Connections</td><td>Cable ties, proper fastening</td></tr>
+    <tr><td>Support weight of items and person</td><td>Be able to handle 200N</td><td>Bearing and structure mechanics</td><td>PMD, Material Properties</td><td>~</td><td>~</td></tr>
+    <tr><td>Two positions</td><td>Two resting positions</td><td>Controls, Mechanics</td><td>PMD, Datasheets</td><td>~</td><td>~</td></tr>
+    <tr><td>Little deflection</td><td>Decrease error and deflections</td><td>Beam-bending, compliance analysis</td><td>Euler-Bernoulli Beam Theory, PMD</td><td>Increased weight, cost</td><td>Use better geometry and exercise wisdom</td></tr>
+    <tr><td>Within budget</td><td>Cost less than $100</td><td>Recycle/Re-used materials</td><td>Re-use material sites, McMaster, Amazon</td><td>Might get inferior items</td><td>Exercise caution and wisdom</td></tr>
+    <tr><td>Easy mount, portable</td><td>Detachable flat surface</td><td>Coupling design and analysis</td><td>Precision Machine Design</td><td>Reduced robustness</td><td>Better coupling design</td></tr>
+  </table>
+
+  <p>Strategy 2: Desk mounted</p>
+  <img src="./week3/tab2.jpg" width="200px" style="float:left;padding-right:20px"> 
+  There would be an actuated structure placed on top of a desk. The desk will be the "resting position" and the actuated structure can rise up to the "standing position".
+
+  <table style="width:100%"><caption>FRDPARRC Table for Desk-Mounted Table</caption>
+    <tr><th>Functional Requirements</th><th>Design Parameters</th><th>Analysis</th><th>References</th><th>Risks</th><th>Counter-Measures</th></tr>
+
+    <tr><td>Electronically actuated</td><td>Stepper motor and leadscrew design</td><td>Torque, power analysis</td><td>PMD, datasheets</td><td>Cables, Connections</td><td>Cable ties, proper fastening</td></tr>
+    <tr><td>Support weight of items and person</td><td>Be able to handle 200N</td><td>Bearing and structure mechanics</td><td>PMD, Material Properties</td><td>~</td><td>~</td></tr>
+    <tr><td>Little deflection</td><td>Decrease error and deflections</td><td>Beam-bending, compliance analysis</td><td>Euler-Bernoulli Beam Theory, PMD</td><td>Increased weight, cost</td><td>Use better geometry and exercise wisdom</td></tr>
+    <tr><td>Within budget</td><td>Cost less than $100</td><td>Recycle/Re-used materials</td><td>Re-use material sites, McMaster, Amazon</td><td>Might get inferior items</td><td>Exercise caution and wisdom</td></tr>
+    <tr><td>Easy mount, portable</td><td>Can be used on any desk</td><td>Coupling design and analysis</td><td>Precision Machine Design</td><td>Non-rigid attachment to desks</td><td>Better coupling design</td></tr>
+  </table>
+
+  <p>Strategy 3: Floor placed</p>
+  <img src="./week3/tab3.jpg" width="120px" style="float:left;padding-right:20px"> 
+  This would be a complete table that can is on the floor and can extend upwards. This would like require the most material and work require the higher accuracy per component due to the larger number and size of compoenents.
+
+  <table style="width:100%"><caption>FRDPARRC for Floor Table</caption>
+    <tr><th>Functional Requirements</th><th>Design Parameters</th><th>Analysis</th><th>References</th><th>Risks</th><th>Counter-Measures</th></tr>
+    
+    <tr><td>Electronically actuated</td><td>Telescoping, or scissor-lift</td><td>Torque, power analysis</td><td>PMD, datasheets</td><td>Risk of injuring user</td><td>Guards, Covers can be utilized</td></tr>
+    <tr><td>Support weight of items and person</td><td>Be able to handle 200N</td><td>Bearing and structure mechanics</td><td>PMD, Material Properties</td><td>~</td><td>~</td></tr>
+    <tr><td>Two positions</td><td>To resting positions</td><td>Controls, Mechanics</td><td>PMD, Datasheets</td><td>~</td><td>~</td></tr>
+    <tr><td>Little deflection</td><td>Decrease error and deflections</td><td>Beam-bending, compliance analysis</td><td>Euler-Bernoulli Beam Theory, PMD</td><td>Increased weight, cost</td><td>Use better geometry and exercise wisdom</td></tr>
+    <tr><td>Within budget</td><td>Cost less than $100</td><td>Recycle/Re-used materials</td><td>Re-use material sites, McMaster, Amazon</td><td>Might get inferior items</td><td>Exercise caution and wisdom</td></tr>
+    <tr><td>Easily portable</td><td>Reduced weight and increase compactness</td><td>Coupling design and analysis</td><td>Precision Machine Design</td><td>Reducing weight would reduce stiffness</td><td>More rigid mechanical design</td></tr>
+  </table>
+
+  <p>The wall-mounted table is a very interesting strategy. The attached <a href="./week3/error.xls">error apportionment</a> shows a good template for tolerances for each component. The maximum allowable error was 5 mm.</p>
+  <br><center><h1>Brainware and Hardware<h1></center> 
+  <center><h3>Linear Motion System<h3></center>
+  <p>The linear motion system is robust and moves freely. The ABS-Aluminum friction is low compared to other materials. The longer slot means there is much less friction and reduces over-constraining. Two modes of actuation are being explored: a leadscrew design and a rack-pinion design.</p>
+  <img src="./week3/lap.png" width="500px"><img src="./week3/act.jpg" width="200px"><br>
+  <p>The video below shows the linear axis:</p>
+  <center><iframe width="420" height="315" src="https://www.youtube.com/embed/MN_WTfS-VVg"></iframe></center>
+  </div>
+  </body>
+</html>

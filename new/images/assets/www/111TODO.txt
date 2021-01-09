@@ -1,0 +1,5 @@
+    <!-- Add 2.007 and some pictures. Make it look pretty -->
+    <!-- Add Jasper and some pictures. Make it look pretty -->
+    <!-- Write a whole paragraph about tipper-->
+
+Also, add a headshot or something to the mainpage
