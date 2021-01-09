@@ -7,8 +7,16 @@ body {
   margin: 0;
 }
 
-.navbar ul {
-  /*height: 60px;*/
+.content {
+  display: flex;
+  justify-content: center;
+}
+
+.misc-container {
+    display: flex;
+    flex-basis: 1200px;
+    flex-grow: 0;
+    justify-content: center;
 }
 
 .header {
