@@ -30,11 +30,12 @@ body {
 }
  
 .image-container {
-  display: flex;
+  /*display: flex;*/
+  margin: auto;
   flex-grow: 0;
   flex-basis: 400px;
   flex-shrink: 1;
-  justify-content: center;
+  /*justify-content: center;*/
 }
 
 .text-container {
