@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   text-align: center;
+  height: auto;
   margin-bottom: 20px;
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
 }
@@ -12,9 +13,9 @@
   background-color: #ffffff;
   list-style-type: none;
   margin: 0;
-  /*padding-top: 20px;*/
-  height: 40px;
+  height: auto;
   padding-inline-start: 0px;
+  padding-bottom: 20px;
 }
 
 .navbar a {
@@ -43,4 +44,20 @@
 
 .navbar .navbar-logo{
   padding: 20px 0px;
+}
+
+@media screen and (max-width: 440px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+    margin: 0px;
+    display: block;
+  }
+  .navbar a:hover {
+    border-style: none;
+    border-width: 0px;
+  }
+  .navbar ul {
+    padding-bottom: 0px;
+  }
 }
