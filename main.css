@@ -31,7 +31,7 @@ body {
  
 .image-container {
   /*display: flex;*/
-  margin: auto;
+  /*margin: auto;*/
   flex-grow: 0;
   flex-basis: 400px;
   flex-shrink: 1;
@@ -70,6 +70,7 @@ body {
   }
   .image-container {
     flex-basis: unset;
+    margin: auto;
   }
 }
 /* 
