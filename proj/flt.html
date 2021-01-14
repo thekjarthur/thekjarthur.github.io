@@ -31,17 +31,17 @@
 	<div class="project-container flex-column">
 
     <h3>Flute</h3>
+    <h4>(WORK IN PROGRESS)</h4>
     <p> 
-      I learned to play the atenteben when I was 10, as part
+      I learned to play the atenteben over a decade ago, as part
       of my school's music club. The atenteben is a Ghanaian
       bamboo flute, played vertically, much like a recorder.
       Since it is carved out of bamboo, the flutes are known to 
       warp over time. Common practice is to submerge the flutes in 
-      water, to slow the warping effect. Since it is carved by artisans, 
+      water, to slow the warping effect. Since it is carved, 
       there tends to be errors in pitch. Two flutes carved by the 
-      same maker will deviate. This makes ensemble playing rather 
-      difficult. Also, since flutes can't be tuned like string 
-      instruments, their range is fixed (most are in B-flat or C).
+      same artisan will inevitably have discrepancies in pitch, making 
+      ensemble playing difficult for multiple flutes.
     </p>
     <p>
       I decided to make a set of molds to manufacure flutes with
@@ -49,31 +49,36 @@
       of molds, and epoxy to allow for customizable molds. 
     </p>
 
-    <h4>Calculating Tone Holes</h4>
+    <h4>Tone Placement Theory</h4>
     <p>
-      First, I calculated the dimensions of the flute, tones
-      accurate to the first degree. There will likely be need for
-      further correction. Viscious and thermal effects weren't taken
-      into account. The calculation are based on Musical Mathematics, 
-      by Cris Forster and Acoustical Aspects of Woodwind Instruments, 
-      by Cornelis J. Nederveen. For each tone hole, the fundamental
+      Firstly, I calculated the dimensions of the flute and placement
+      of tone holes, to produce desired pitches. Several corrections including
+      viscous and thermal effects will eventually be taken into account. The 
+      calculations are based on Musical Mathematics, by Cris Forster and 
+      Acoustical Aspects of Woodwind Instruments, by Cornelis J. Nederveen. 
+      The placement of each tone hole is calculated by the fundamental
       frequency of standing waves produced by a substitute tube of the same
-      acoustic lenght, L_s, is used with a few corrections for the effects
-      of the tone holes and embouchure holes, l_T and l_E.
+      acoustic length, L_s, with a few corrections for the effects
+      of the tone holes and embouchure holes, l_T and l_E, respectively.
     </p>
-    <img src="../images/assets/flute/flute-figure.png" style="width: 80%;">
-    <img src="../images/assets/flute/flute-calcs.png" style="width: 80%;">
+    <h4>Measured Frequency</h4>
+    <p>To compare the theoretical pitch to the actual pitch on physical flutes, I recorded an octave and performed FFT Analysis in MATLAB.</p>
 
-    <h4>CAD</h4>
-    <p>Produced in OnShape.</p>
-    <img src="../images/assets/flute/flute-molds-cad.png" style="width: 80%;">
-    <img src="../images/assets/flute/flute-molds-cad-0.png" style="width: 80%;">
+	<div class="row">
+	<div class="column50">
+    <img src="../images/assets/flute/flute-figure.png">
+    <img src="../images/assets/flute/flute-calcs.png">
+	</div>
+	<div class="column50">
+    <img src="../images/assets/flute/flute-analysis-1.png">
+	</div>
+	</div>
 
-    <h4>Prototype</h4>
-    <p>Using materials from a hardware store, 3D printed parts and epoxy.</p>
+    <h4>Fabrication</h4>
+    <p>Mold was first modelled in OnShape, and the prototype was made from materials from a hardware store, 3D printed parts and epoxy.</p>
+    <img src="../images/assets/flute/flute-molds-cad.png" style="height: 400px;">
+    <img src="../images/assets/flute/flute-molds-cad-0.png" style="height: 400px;">
 
-    <h4>Frequency Analysis</h4>
-    <p>Analysis of frequencies using Audacity and frequency decomposition in MATLAB.</p>
     
 	</div>
 </div>
