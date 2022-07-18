@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    <link rel="stylesheet" href="../navbar.css" />
+    <link rel="stylesheet" href="./fontstyles.css" />
+    <link rel="stylesheet" href="../main.css" />
+    <link rel="stylesheet" href="./project-styles.css" />
+    <link rel="stylesheet" href="./table.css" />
+    <link rel="stylesheet" href="./nighthawks.css" />
+    <title>Project | Kwabena Arthur</title>
+  </head>
+
+<body>
+<div class="navbar">
+      <div class="navbar-logo">KWABENA ARTHUR</div>
+      <ul>
+        <li><a href="./../index.html">about me</a></li>
+        <li><a  class="active" href="../proj.html">projects</a></li>
+        <li><a href="./publ.html">publications</a></li>
+        <li><a href="./resume_kwabena_arthur.pdf">resume</a></li>
+      </ul>
+    </div>
+
+
+
+    
+<div class="content">
+	<div class="project-container flex-column">
+
+    <h3>Flute</h3>
+    <h4>(WORK IN PROGRESS)</h4>
+
+    <div class="home-container">
+      <div class="image-container">
+        <img src="./../images/assets/flute/flute-playing-0.jpg">
+      </div>
+      <div class="text-container" style="margin-top: 0px;">
+        <p> 
+          I learned to play the atenteben over a decade ago, as part
+          of my primary school's music club. The atenteben is a Ghanaian
+          bamboo flute. Since it is carved out of bamboo, the flutes are known to 
+          warp over time. Common practice is to submerge the flutes in 
+          water, to slow the warping effect. Often times, there are discrepancies in the pitch of tones. Two flutes carved by the 
+          same artisan will inevitably have discrepancies in pitch, making 
+          ensemble playing difficult for multiple flutes.
+          I decided to make a set of molds to manufacture flutes with
+          that could be played in ensemble. The plan is to use a set
+          of molds, and epoxy to allow for customizable molds. 
+        </p>
+      </div>
+    </div>
+
+    <h4>Tone Placement Theory</h4>
+    <p>
+      Firstly, I calculated the dimensions of the flute and placement
+      of tone holes, to produce desired pitches. Several corrections including
+      viscous and thermal effects will eventually be taken into account. The 
+      calculations are based on Musical Mathematics, by Cris Forster and 
+      Acoustical Aspects of Woodwind Instruments, by Cornelis J. Nederveen. 
+      The placement of each tone hole is calculated by the fundamental
+      frequency of standing waves produced by a substitute tube of the same
+      acoustic length, L_s, with a few corrections for the effects
+      of the tone holes and embouchure holes, l_T and l_E, respectively.
+    </p>
+    <h4>Measured Frequency</h4>
+    <p>To compare the theoretical pitch to the actual pitch on the atenteben, I recorded an octave and performed FFT Analysis in MATLAB.</p>
+
+	<div class="row">
+	<div class="column50">
+    <img src="./../images/assets/flute/flute-figure.png">
+    <img src="./../images/assets/flute/flute-calcs.png">
+	</div>
+	<div class="column50">
+    <img src="./../images/assets/flute/flute-analysis-1.png">
+	</div>
+	</div>
+
+    <h4>Fabrication</h4>
+    <p>Mold was first modelled in OnShape, and the prototype was made from materials from a hardware store, 3D printed parts and epoxy.</p>
+    <img src="./../images/assets/flute/flute-molds-cad.png" style="height: 400px;">
+    <img src="./../images/assets/flute/flute-molds-cad-0.png" style="height: 400px;">
+
+    
+	</div>
+</div>
+
+
+
+</body>
+</html>

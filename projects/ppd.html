@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+    />
+    <link rel="stylesheet" href="../navbar.css" />
+    <link rel="stylesheet" href="../footer.css" />
+    <link rel="stylesheet" href="../projects.css" />
+    <link rel="stylesheet" href="../main.css" />
+    <link rel="stylesheet" href="./project-styles.css"/>
+    <link rel="stylesheet" href="./tabs.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Projects | Kwabena Arthur</title>
+  </head>
+
+  <body>
+    <div class="navbar">
+      <ul>
+        <li style="float:left;"><div class="square-highlight"></div></li>
+        <li style="float:left;">
+          <a href="../index.html" class="name" style="font-weight: bold;">Kwabena Arthur</a>
+          <a href="../index.html" class="title">/ Mechanical Engineer</a>
+        </li>
+        <li><a href="../index.html">ABOUT ME</a></li>
+        <li><a class="active" href="../projects.html">MECHE</a></li>
+        <li><a href="../publications.html">AI+ML</a></li>
+        <li><a href="../resume_kwabenaarthur.pdf">RESUME</a></li>
+      </ul>
+    </div>
+<div class="content">
+<div class="wrap">
+<h1>Transformable Desk</h1>
+  <center><img src="./../images/assets/www/table-images/in-use.jpg" width="500px"></center>
+  
+  <h3>Abstract</h3>
+  <p>This is the design/manufacturing/reiterating of a desk capable of transforming for a standing or a sitting user. The white paper can be accessed <a href="./whitepaper.docx">here</a> and the design report <a href="./design-report.pdf">here</a>. In the strategizing phase, three ideas were analyzed: floor-based, desktop and wall-mounted desk. The wall mounted desk was chosen to be the final strategy to be pursued.</p>
+  
+  <h3>Design</h3>
+  <img src="./../images/assets/www/images/des0.png" width="700px">
+  <p>Basic functional requirements were created and a preliminary <a href="https://web.mit.edu/kkarthur/www/week5/wall-error-app.xlsx">error budget</a> was created. This specified error and expected loading was used to generate required stiffnesses of different components: <a href="https://web.mit.edu/kkarthur/www/first-order-calculations.xlsx">first-order-calculations.xlsx</a>. 
+  <img src="./../images/assets/www/images/wall-mounted-1.png" style="float:left;" height="150px">
+  <p>After analyzing different strategies and concepts, I selected the wall-mounted desk strategy. To reduce the weight of the table while increasing it's stiffness, diagonals were included from the front corners of the flats to the base of the slider.</p>
+
+  <table style="width:100%"><caption>FRDPARRC for Wall-Mounted Table</caption>
+    <tr><th>Functional Requirements</th><th>Design Parameters</th><th>Analysis</th><th>References</th><th>Risks</th><th>Counter-Measures</th></tr>
+    <tr><td>Electronically actuated</td><td>Stepper motor and leadscrew design</td><td>Torque, power analysis</td><td>PMD, datasheets</td><td>Cables, Connections</td><td>Cable ties, proper fastening</td></tr>
+    <tr><td>Support weight of items and person</td><td>Be able to handle 200N</td><td>Bearing and structure mechanics</td><td>PMD, Material Properties</td><td>~</td><td>~</td></tr>
+    <tr><td>Two positions</td><td>Two resting positions</td><td>Controls, Mechanics</td><td>PMD, Datasheets</td><td>~</td><td>~</td></tr>
+    <tr><td>Little deflection</td><td>Decrease error and deflections</td><td>Beam-bending, compliance analysis</td><td>Euler-Bernoulli Beam Theory, PMD</td><td>Increased weight, cost</td><td>Use better geometry and exercise wisdom</td></tr>
+    <tr><td>Within budget</td><td>Cost less than $100</td><td>Recycle/Re-used materials</td><td>Re-use material sites, McMaster, Amazon</td><td>Might get inferior items</td><td>Exercise caution and wisdom</td></tr>
+  </table>
+
+  <img src="./../images/assets/www/images/preload-1.png" style="float:left;" height="170px">
+  <p>A dovetail design was selected for the slider. The angle of the slider combined with the gravity preload will give the system lateral stiffness. For a boxway system, cuts can be made to create a double-cantilever spring for preloading. This also allows for a graceful failure: the thickness of the sections can be calculated such that the spring will break and jam the system in case of excess loading. The position of the smaller spring is switched on the bottom half due to the direction of displacement. A similar method could be implemented at the expense of additional complexity.</p>
+  <p>The dovetail has a slot for the nut of the leadscrew. To prevent overconstraint, it is only constrained in the lateral direction.</p>
+  <p>A downloadable version of the CAD can be accessed <a href="./desk_kwabena.iges">here</a> or access the full model on <a href="https://cad.onshape.com/documents/cc740b01e7db80d67e17c87e/w/a89dc3b1c24aa3956bf9d050/e/0ee22ff38d343223b2f28047">Onshape</a>.</p>
+  <center><h3>First Order Calculations</h3></center>
+  <p>Hand written notes on calculations can be accessed through the tabs below. These are the calculations that went into the error apportionment spreadsheet. They are used as a first order estimation for sizing and errors. A final FEA will be run to full model the stress and deformations in the final structure. The final error apportionment spreadsheet can also be accessed <a href="./error-apportionment.xlsx">here</a>.</p>
+
+  <div class="tab">
+    <button class="tablinks" onclick="openTab(event, 'Sketches')">Sketches</button>
+    <button class="tablinks" onclick="openTab(event, 'Table/Slider')">Table/Slider</button>
+    <button class="tablinks" onclick="openTab(event, 'Bearing')">Bearing</button>
+    <button class="tablinks" onclick="openTab(event, 'Risks/Calculations')">Risks/Calculations</button>
+    <button class="tablinks" onclick="openTab(event, 'Drawings')">Drawings</button>
+  </div>
+
+  <div id="Sketches" class="tabcontent"> 
+    <span onclick="this.parentElement.style.display='none'" class="top-right">x</span>
+    <h3>Sketches</h3>
+    <img src="./../images/assets/www/sketches/sketches-1.png" width="100%">
+  </div>
+
+  <div id="Table/Slider" class="tabcontent"> 
+    <span onclick="this.parentElement.style.display='none'" class="top-right">x</span>
+    <p>The diagonals and flat are given a simple cross section for first order calculations. A more accurate model can be created by resolving the forces in axial and normal components, and superpositioning them.</p>
+    <img src="./../images/assets/www/sketches/sketches-2.png" width="100%">
+  </div>
+
+  <div id="Bearing" class="tabcontent" width="100%"> 
+    <span onclick="this.parentElement.style.display='none'" class="top-right">x</span>
+    <p>The bearings will be constructed with angle cuts and adhered with glue.</p>
+    <img src="./../images/assets/www/sketches/sketches-3.png" width="100%">
+  </div>
+
+  <div id="Risks/Calculations" class="tabcontent"> 
+    <span onclick="this.parentElement.style.display='none'" class="top-right">x</span>
+    <p>The primary concern was the slider forcing out of bearing. The keepers on the bearing was made more square the reduce bending and angular deflection. The dimensions of the bearings were chosen such that the angular deflection and the extension of the bearing is within allowable bounds.</p>
+    <img src="./../images/assets/www/sketches/sketches-4.png" width="100%">
+  </div>
+
+  <div id="Drawings" class="tabcontent" width="100%"> 
+    <span onclick="this.parentElement.style.display='none'" class="top-right">x</span>
+    <p>Engineering drawings used in manufacturing are below. The combined document can also be accessed <a href="./table-drawings/drawings.pdf">here.</a>
+    <ul>
+      <li><a href="./table-drawings/BearingAssemblyDrawing.pdf">Bearing</a></li>
+      <li><a href="./table-drawings/BlockTopDrawing.pdf">Bearing Block 1</a></li>
+      <li><a href="./table-drawings/BlockBottomDrawing.pdf">Bearing Block 1</a></li>
+      <li><a href="./table-drawings/MotorBlockDrawing.pdf">Motor Mount</a></li>
+      <li><a href="#">Table</a></li>
+      <li><a href="./table-drawings/CarriageDrawing.pdf">Carriage</a></li>
+    </ul>
+    </p>
+  </div>
+
+  <script>
+  function openTab(event, section){
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i=0; i < tabcontent.length; i++) {tabcontent[i].style.display = "none";}
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i=0; i < tablinks.length; i++) {tablinks[i].className=tablinks[i].className.replace(" active", "");}
+    document.getElementById(section).style.display = "block";
+    evt.currentTarget.className += "active";}
+  document.getElementById("defaultOpen").click();
+  </script>
+
+  <h3><center>Manufacturing</center></h3>
+  <h3>Bill of Materials</h3>
+  <p>The lumber was purchased from a local Home Depot and the electronics from the local Microcenter. Most of the hardware was ordered online from McMasterCarr.</p>
+  <img src="./../images/assets/www/table-images/lumber-planed.jpg" width="400px" style="float:right;" hspace="10">
+  <table style="width:40%">
+  <tr><th>1</th><th>2 x 8 Fir Lumber [8 ft]</th><th>$6.49</th></tr>
+  <tr><th>1</th><th>2'x 4' Plywood [1/4"]</th><th>$10.22</th></tr>
+  <tr><th>1</th><th>Microcontroller</th><th>N/A</th></tr>
+  <tr><th>1</th><th>Motor Controller</th><th>$20.00</th></tr>
+  <tr><th>1</th><th>Stepper Motor</th><th>$30</th></tr>
+  <tr><th>1</th><th>Powersupply</th><th>$10</th></tr>
+  <tr><th>1</th><th>Leadscrew</th><th>$18.97</th></tr>
+  <tr><th>2</th><th>Spider Coupling</th><th>$7.56</th></tr>
+  <tr><th>1</th><th>Rubber Intermediate</th><th>$2.47</th></tr>
+  <tr><th>1</th><th>Wood screws</th><th>N/A</th></tr>
+  <tr><th>1</th><th>Fasteners</th><th>N/A</th></tr>
+  <tr><th>4</th><th>Bearings</th><th>$27.60</th></tr>
+  <tr><th>1</th><th>Wood Glue</th><th>$8</th></tr>
+  </table>
+  <h3>Table</h3>
+  <p>This is the flat surface of the desk. The 2'x 4' piece of plywood is cut into 3 pieces. These pieces are glued and then clamped to maintain the force necessary for the glue.</p>
+  <h3>Slider and Carriage</h3>
+  <p>The lumber was first planed for flatness. In order to cut the angles needed by the dove-tails, a table saw was used, setting the blade to the appropriate angle. The error from this process will be included in the final readjustment of the error budget and the reiteration process. The sliders and bearings were cut at the same session to minimize fabrication error.</p>
+  <center><img src="./../images/assets/www/table-images/bearing-clamp.jpg" width="400px"></center>
+  <p>The first keeper was clamped and glued to create the bearing. The mid-cut was inserted with a pieces of paper between the angles of the mid-cut and bearing to ensure tight tolerance. The second keeper was then  glued to the bearing and clamped; it was clamped to the bearing and to the slider to ensure the right tolerance.</p>
+  <center><img src="./../images/assets/www/table-images/carriage-bearing.jpg" width="400px"></center>
+  <h3>Diagonals</h3>
+  <p>Based on the pre-calculated angles, the table saw was adjusted and the diagonals were cut. They were then screwed into the carriage and the table. The lateral piece was also added to the base of the desk and carriage.</p>
+  <h3>Leadscrew</h3>
+  <p>Both ends of the leadscrew were turned down in according to the design. The feedspeed was adjusted in order to increase the overall accuracy of the manufacturing process.</p>
+  <center><img src="./../images/assets/www/table-images/leadscrew-lathe.jpg" width="400px"></center>
+  <h3>Motor Mount</h3>
+  <p>The motor mount was made from a piece of lumber. It was aligned and screwed to the bottom of the bearing. The spider coupling handled any misalignment.</p>
+  <center><img src="./../images/assets/www/table-images/motor-mount.jpg" width="200px"></center>
+
+  <h3>Bearings block</h3>
+  <p>The bearing blocks were created from the center cut piece of wood in order to use part-matching and minimize errors. Following the drawings, the blocks were made ensuring that fit with the bearings was tight.</p>
+  <center><img src="./../images/assets/www/table-images/bearing-block-mill-2.jpg" width="400px"></center>
+  
+  <h3><center>Characterization</center></h3>
+  <center><img src="./../images/assets/www/table-images/table-done.jpg" style="float:left;" hspace="10" width="200px"></center>
+  <h3>Summary</h3>
+  <p>The final model was aesthetically pleasing. The table is very rigid, thanks to choices made involving diagonals, table thickness and the lateral piece.</p>
+
+  <h3>Issues</h3>
+  <p>Bent Leadscrew: The leadscrew had a bend, which caused the carriage to precess when actuated. This could not be easily rectified, however the tolerancing on the carriage reduced the noticability effect at the tip of the table.</p>
+  <p>Improper Tolerance: Most likely due to improper clamping, there was a gap between the carriage and the sides of the bearing, larger than the predefined error.</p>
+  <br><center><img src="./../images/assets/www/table-images/in-use-2.jpg" width="350px"></center>
+</div>
+</div>
+
+<div class="footer">
+  <ol>
+    <li><a style="font-weight: bold;">Call</a>
+      <br><a>+1-617-800-6842</a>
+    </li>
+
+    <li><a style="font-weight: bold;">Email</a>
+      <br><a>thekjarthur@gmail.com</a>
+    </li>
+
+    <li><a style="font-weight: bold;">Follow</a>
+      <br><a href="https://www.linkedin.com/in/kwabenaarthur/"><i class="fa fa-linkedin" style="color: black;"></i></a>
+    </li>
+  </ol>
+</div>
+
+  </body>
+</html>

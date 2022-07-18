@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <!-- <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    /> -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+    />
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="projects.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Publications | Kwabena Arthur</title>
+  </head>
+
+  <body>
+    <div class="navbar">
+      <ul>
+        <li style="float: left;"><div class="square-highlight"></div></li>
+        <li style="float:left;">
+          <a href="./index.html" class="name" style="font-weight: bold;">Kwabena Arthur</a>
+          <a href="./index.html" class="title">/ Mechanical Engineer</a>
+        </li>
+        <li><a href="./index.html">ABOUT ME</a></li>
+        <li><a href="./projects.html">MECHE</a></li>
+        <li><a class="active" href="#">AI+ML</a></li>
+        <li><a href="resume_kwabenaarthur.pdf">RESUME</a></li>
+      </ul>
+    </div>
+    <div class="content">
+        <div class="project-container">
+          <h2>Publications & Patents</h2>
+          <div class="blurb">My graduate research focused on physics-informed machine learning - various algorithms and strategies to incorporate physical knowledge into machine learning architecture. We extensively used these principles in several optics and imaging problems, allowing us to achieve results that traditional computational imaging methods could not accomplish..</div>
+
+          <div class="project-card">
+            <div class="highlight"></div>
+            <h3>High-Resolution limited-angle phase tomography of dense layered objects using deep neural networks</h3>
+            <h4>Paper | PNAS</h4>
+            <p>In this work, we used machine learning based method to perform tomography on dense layered objects. The projection range was higly limited, ± 10°, and we showed that performance was maintain under low illumination. Our goal was to image integrated circuits (IC), and experimentally verified our method with an optically up-scaled setup.
+
+            Rather than the typical approach of phase projection followed by 3-dimensional reconstruction, we used a single step method to reconstruct the 3-dimensional volume. We used a physics-informed prprocess step, in order to incorporate rigorous physical understanding to an otherwise end-to-end, black-box approach.
+
+            We also showed the effectiveness of training in simulation, while testing in experimentation. A typical issue with deep learning is the prohibitive sizes of training data. In the case of physical projects, such as reconstructing the interior of integrated circuits, one would have to image several thousands of sample ICs. Our method still produced high fidelity reconstructions with this synthetic data.
+
+            This project was supported by Intelligence Advanced Research Projects Activity (IARPA) No. FA8650-17-C-9113 and Singapore-MIT Alliance for Research and Technology (SMART) Grant No. 015824-00169.</p>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/31527279/"><img src="./new/banner_tomo2019_2.png"></a>
+          </div>
+
+
+          <div class="project-card">
+            <div class="highlight"></div>
+            <h3>Computer-implmemented Apparatus and Methods for Analyzing Milk</h3>
+            <h4>Provisional Patent | USPTO</h4>
+            <p>Patent for UV-VIS analysis of milk, utilzing attenuation and fluorescence.</p>
+          </div>
+
+
+          <div class="project-card">
+            <div class="highlight"></div>
+            <h3>Low Photon Count Phase Retrieval Using Deep Learning</h3>
+            <h4>Paper | PhysRevLett</h4>
+            <p>We experimentally demonstrate the effectiveness of our physics-informed deep neural network in the phase retrieval problem under extremely low photon counts. Compared with classical iterative approaches such as the Gerchberg-Saxton Algorithm, our method still maintains performance under conditions as low as 1 photon per pixel on average.
+
+            Rather than the typical mean squared error, we used negative Pearson correlation coefficient (NPCC) as our loss function, as previous work from our group showed the effectiveness of this metric. We also used a physical preprocess step, as means to incorporate physical knowledge into the learning scheme.
+
+            Imaging under such noisy conditions are particularly important when one has a limited imaging time or strict photon budget. The second case of strict photon budget, is often seen in the medical field. In X-ray imaging for example, there are maximum dosages of radiation a patient can be exposed to at a time. A method that maintains performance when the photon dosage is reduced is thus invaluable.
+
+            This project was supported by Intelligence Advanced Research Projects Activity (IARPA) No. FA8650-17-C-9113 and Singapore-MIT Alliance for Research and Technology (SMART) Grant No. 015824-00169.</p>
+            <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.121.243902"><img src="./new/banner_qpr2018.png"></a>
+          </div>
+
+
+          <div class="project-card">
+            <div class="highlight"></div>
+            <h3>Probing shallower: perceptual loss trained Phase Extraction Neural Network (PLT-PheNN) for artifact-free reconstruction at low photon budget</h3>
+            <h4>Paper | Optics Express</h4>
+            <p>We show the effectiveness of perceptual loss as loss function for the phase retrieval problem in natural images.</p>
+            <a href="https://doi.org/10.1364/OE.381301"></a>
+          </div>
+
+<!-- 
+          <div class="project-card">
+            <div class="highlight"></div>
+            <h3>State of Engineering in Ghana</h3>
+            <h4>Conference | GhIE</h4>
+            <p>I was invited to a conference hosted by the Ghana Institution of Engineering, to discuss the state of science, technology and engineering in the country, and to discuss ways to foster innovation.</p>
+            <a href="https://ghie.org.gh/2019/03/07/government-charged-to-invest-in-technology-and-innovation-ghie/"></a>
+          </div> -->
+
+
+
+        </div>
+    </div>
+<div class="footer">
+  <ol>
+    <li><a style="font-weight: bold;">Call</a>
+      <br><a>+1-617-800-6842</a>
+    </li>
+
+    <li><a style="font-weight: bold;">Email</a>
+      <br><a>thekjarthur@gmail.com</a>
+    </li>
+
+    <li><a style="font-weight: bold;">Follow</a>
+      <br><a href="https://www.linkedin.com/in/kwabenaarthur/"><i class="fa fa-linkedin" style="color: black;"></i></a>
+    </li>
+  </ol>
+</div>
+
+  </body>
+</html>

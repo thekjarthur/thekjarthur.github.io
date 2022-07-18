@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    <link rel="stylesheet" href="../navbar.css" />
+    <link rel="stylesheet" href="./fontstyles.css" />
+    <link rel="stylesheet" href="../main.css" />
+    <link rel="stylesheet" href="./project-styles.css" />
+    <link rel="stylesheet" href="./table.css" />
+    <link rel="stylesheet" href="./nighthawks.css" />
+    <title>Projects | Kwabena Arthur</title>
+  </head>
+
+  <body>
+        <div class="navbar">
+      <div class="navbar-logo">KWABENA ARTHUR</div>
+      <ul>
+        <li><a href="./../index.html">about me</a></li>
+        <li><a class="active" href="../proj.html">projects</a></li>
+        <li><a href="./publ.html">publications</a></li>
+        <li><a href="./resume_kwabena_arthur.pdf">resume</a></li>
+      </ul>
+    </div>
+
+<div class="content">
+  <div class="project-container flex-column">
+        <h3>Sonic Screwdriver</h3>
+        <h4>(WORK IN PROGRESS)</h4>
+        <p>
+          My current project is creating a sonic screwdriver, inspired by the
+          device (of the same name) in Doctor Who.
+        </p>
+        <p>
+          The goal is to have a pocket sized device with a wide array of sensors
+          and effectors, allowing different functions to be programmed into the
+          device. The PCB was designed in KiCAD, and fabricated by OSHPark. The
+          case was designed in Onshape, to be 3d printed. Several openings along
+          the case allow for the sensors to be properly exposed.
+        </p>
+        
+          <img src="././../old/images/ss1.png" style="max-width: 500px" />
+          <p>ABS Case, Onshape</p>
+          <img src="././../old/images/ss3.png" style="max-width: 500px" />
+          <p>
+            PCB Schematic rev. 3, KiCad. Originally planned to use the ARM Cortex
+            M0+ microcontroller (similar mcu to Arduino Zero's).
+          </p>
+          <img src="./../images/ss_reflow_oven.png" style="max-width: 500px" />
+          <img src="./../images/ss_reflow_oven_2.png" style="max-width: 500px" />
+          <p>
+            Repurposed "reflow oven". Marked improvement from the frying pan
+            model.
+          </p>
+          <img src="./../images/ss_pcb_close.JPG" style="max-width: 500px" />
+          <img src="././../old/images/ss2.png" style="max-width: 500px" />
+          <p>
+            Populated PCB solder in reflow oven; remaining will be hand-soldered. 
+            I replaced the ESP8266 with the more robust ESP-12S in this revision.
+            This is especially useful for adding new functions over wifi and
+            planned communication with the Raspberry Pi server.
+          </p>
+        
+      </div>
+    </div>
+    
+  </body>
+</html>

@@ -1,0 +1,68 @@
+/*site pages, transition-druation: 700ms*/
+body {
+	background-color: #E6DACE;
+	font-family: "Avenir",sans-serif;
+	margin: 0px;
+}
+
+h2 {
+	font-size: 48px;
+	font-weight: bold;
+}
+
+h3  {
+	color: #0050FF;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.project-card {
+	width: 600px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	background-color: #FFFFFF;
+	padding: 20px;
+	text-align: left;
+	margin: auto;
+	margin-bottom: 50px;
+	position: relative;
+}
+
+.project-container {
+	width: 750px;
+	margin: auto;
+	text-align: center;
+	margin-bottom: 150px;
+}
+
+.project-container .blurb{
+	width: 600px;
+	margin: auto;
+	text-align: center;
+	margin-bottom: 50px;
+}
+.project-card a img{
+	/*width: 100%;*/
+	width: 600px;
+	height: 250px;
+	object-fit: cover;
+}
+
+.project-card h3 {
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+
+.project-card .highlight{
+	overflow: hidden;
+	position: absolute;
+	top: 40px;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background-color: #0050FF;
+	width: 10px;
+	height: 30px;
+}
+
+

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    <link rel="stylesheet" href="../navbar.css" />
+    <link rel="stylesheet" href="../fontstyles.css" />
+    <link rel="stylesheet" href="../main.css" />
+    <link rel="stylesheet" href="./project-styles.css" />
+    <link rel="stylesheet" href="./table.css" />
+    <link rel="stylesheet" href="../misc.css" />
+    <link rel="stylesheet" href="../nighthawks.css" />
+    <title>Project | Kwabena Arthur</title>
+  </head>
+
+  <body>
+    <div class="navbar">
+      <div class="navbar-logo">KWABENA ARTHUR</div>
+      <ul>
+        <li><a href=".././index.html">about me</a></li>
+        <li><a class="active" href="../proj.html">projects</a></li>
+        <li><a href="../publ.html">publications</a></li>
+        <li><a href="../resume_kwabena_arthur.pdf">resume</a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <div class="project-container flex-column">
+        <h3>IMU Pen</h3>
+        <h4>Hardware</h4>
+        <p>
+          I developed a prototype IMU pen. This was a submodule - it was part of the sonic screwdriver project. The objective was to create an electronic pend that could be used on any surface, and the writing translated into alphabets through an online socket.
+          The prototype below was made to collect data.
+          <div class="flex-row">
+            <img src="../images/assets/imup/imup_assemblysmooth.png" style="max-width: 100%"/>
+          </div>
+          <div class="flex-row">
+            <img src="../images/assets/imup/imup_exploded.png" style="max-width: 100%"/>
+          </div>
+          <div class="flex-row">
+            <img src="../images/assets/imup/imup_proto.png" style="max-width: 30%"/>
+            <img src="../images/assets/imup/imup_proto2.png" style="max-width: 30%"/>
+          </div>
+          The core electronics of the prototype are the same as for the sonic screwdriver. For collecting data, I used electronic modules from TinyCircuits. 
+          <div class="flex-row">
+            <img src="../images/assets/imup/imup_electronics_software.png" style="max-width: 45%"/>
+            <img src="../images/assets/imup/imup_visualization.gif" style="max-width: 45%"/>
+          </div>
+        </p>
+
+        <h4>Data</h4>
+        <p>
+          The pen collects motion data from the 9-axis module (accelerometer, gyroscope, magnetometer), and uploads them. The data can then be downloaded and used to train a machine learning model to determine the letter being written from the motion data. The motion data for the letter "a" is shown:
+          <div class="flex-row">
+            <img src="../images/assets/imup/imup_motiona.png" style="max-width: 100%"/>
+          </div>
+          Rather than collect 1000s of examples, I opted to first use a combination of unsupervised learning methods, and a priori knowledge on letters for classify motion into alphabets. For aprior knowledge, I first analyzed the use of dashes and dots, and investigated the length (of time) used in writting different letters.
+          <div class="flex-row">
+            <img src="../images/assets/imup/imup_time.png" style="max-width: 80%">
+          </div>
+          I investiagted how the rate of writing affected the quality of motion data. There was ample repeatability when written at different rates. This means there is less of a concern about how quickly letters are written, since the motion would still remain representative of the letter once normalized.
+          <div class="flex-row">
+            <img src="../images/assets/imup/imup_writing_speed_plots.png" style="max-width: 80%">
+          </div>
+        </p>
+
+        <h5>Unsupervised Learning</h5>
+        <p>
+          t-stochastic neigheborhood embeddings (tSNE) was used to learn latent structures in the data space of all recorded motion. Three letters that are similar (a, d, and g) are shown below. In the plots, show that they are similar (grouped nearby), but distinct enough that they are clustered seperately.
+          <div class="flex-row">
+            <img src="../images/assets/imup/imup_tsne_adg.png" style="max-width: 80%">
+          </div>
+          The remaining letters (excluding letters involving dots and dashes) are shown below. The distinctive clustering shows that there are latent structures in our data. Thus, a trained DNN model will be able to extract the correct letter from the motion data.
+          <div class="flex-row">
+            <img src="../images/assets/imup/imup_tsne_letters.png" style="max-width: 100%">
+          </div>
+        </p>
+      </div>
+    </div>
+
+  </body>
+</html>

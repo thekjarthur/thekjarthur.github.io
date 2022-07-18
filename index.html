@@ -6,53 +6,84 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
       rel="stylesheet"
     /> -->
+
+    <!--
+      Sticky header
+    -->
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, minimum-scale=1"
     />
     <link rel="stylesheet" href="navbar.css" />
-    <link rel="stylesheet" href="fontstyles.css" />
+    <link rel="stylesheet" href="footer.css" />
     <link rel="stylesheet" href="main.css" />
-    <link rel="stylesheet" href="nighthawks.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Engineering Portfolio | Kwabena Arthur</title>
   </head>
 
-  <body>
+  <body class="half-color">
     <div class="navbar">
-      <div class="navbar-logo">KWABENA ARTHUR</div>
       <ul>
-        <li><a class="active" href="#">about me</a></li>
-        <li><a href="proj.html">projects</a></li>
-        <li><a href="publ.html">publications</a></li>
-        <li><a href="./resume_kwabena_arthur.pdf">resume</a></li>
+        <li style="float: left;"><div class="square-highlight"></div></li>
+        <li style="float:left;">
+          <a href="#" class="name" style="font-weight: bold;">Kwabena Arthur</a>
+          <a href="#" class="title">/ Mechanical Engineer</a>
+        </li>
+        <li><a class="active" href="#">ABOUT ME</a></li>
+        <li><a href="./projects.html">MECHE</a></li>
+        <li><a href="./publications.html">AI+ML</a></li>
+        <li><a href="resume_kwabenaarthur.pdf">RESUME</a></li>
       </ul>
     </div>
+
     <div class="content">
       <div class="home-container flex-row">
-        <div class="image-container"><img class="home-headshot" src="./images/bena_image_home.jpg"/></div>
+        <div class="text-container">
+        <div class="picture-card">
+          <img class="home-headshot" src="./images/bena_image_home_square.jpg"/>
+          <a style="font-weight: bold; font-size: 32px;"><p>Kwabena<br>Arthur</p></a>
+          <div class="blue-line"></div><!-- Use a border on the bottom-->
+          <p style="margin-top: 20px;">Mechanical Engineer | Data Scientist</p>
+          
+          <ul>
+            <li><a href="https://www.linkedin.com/in/kwabenaarthur/"><i class="fa fa-linkedin" style="font-size:24px;color: black;"></i></a></li>
+          </ul>
+        </div>
+
+        </div>
         <div class="text-container">
           <div>
+            <p style="font-size: 90px; margin: 0px; font-weight: bold;">Hello</p>
+            <p style="font-size: 25px;">Here's who I am & what I do</p>
+            <a class="button" href="resume_kwabenaarthur.pdf">RESUME</a>
+            <a class="button" href="projects.html">PROJECTS</a>
             <p>
-              A mechanical engineer with a passion to make and design: interested in product 
-              and mechanical design, systems design and manufacturing.
+              I received a M.Sc. in Mechanical Engineering, and a B.Sc. in Mechanical 
+              Engineering and Physics from MIT. During my graduate program, my research was focused on incorporating physical knowledge into machine learning algorithms.
             </p>
             <p>
-              I received a M.Sc. in Mechanical Engineering (2020), and a B.Sc. in Mechanical 
-              Engineering and Physics (2017) from MIT. As a graduate student, I joined the 
-              3D Optical Systems Group at MIT. My research focused on methods of incorporating 
-              physical knowledge into deep learning
-              algorithms.
-            </p>
-            <p>
-              On this website you'll find information on my engineering background, 
-              past projects and publications on machine learning and imaging.
-            </p>
-            <p>
-              Please reach out to me at: kkarthur@mit.edu
+              I'm an engineer with a passion to make, design and solve complex problems. I'm interested in optical machine learning, product 
+              and mechanical design, systems design and prototyping.
             </p>
           </div>
         </div>
       </div>
     </div>
+<div class="footer">
+  <ol>
+    <li><a style="font-weight: bold;">Call</a>
+      <br><a>+1-617-800-6842</a>
+    </li>
+
+    <li><a style="font-weight: bold;">Email</a>
+      <br><a>thekjarthur@gmail.com</a>
+    </li>
+
+    <li><a style="font-weight: bold;">Follow</a>
+      <br><a href="https://www.linkedin.com/in/kwabenaarthur/"><i class="fa fa-linkedin" style="color: black;"></i></a>
+    </li>
+  </ol>
+</div>
+
   </body>
 </html>

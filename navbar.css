@@ -1,49 +1,75 @@
 .navbar {
   background-color: #FFFFFF;
   width: 100%;
-  margin: 0;
-  padding: 0;
+  padding: 20px 0px 25px;
   text-align: center;
   height: auto;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  z-index:1; /*Add this*/
 }
 
 .navbar ul {
-  background-color: #ffffff;
   list-style-type: none;
   margin: 0;
   height: auto;
   padding-inline-start: 0px;
-  padding-bottom: 20px;
+  text-align: right;
 }
 
 .navbar a {
-  background-color: #ffffff;
   text-align: center;
+  font-size: 12px;
   height: 100%;
   margin: 20px 16px;
   text-decoration: none;
-  padding-bottom: 15px;
+  color: inherit;
 }
 
 .navbar a:hover {
-  border-style: solid;
-  border-width: 0px 0px 5px 0px;
+  color: #0050FF;
 }
 
-/*.active {
-  border-style: solid;
-  border-width: 0px 0px 5px 0px;
-}*/
+.navbar .active {
+  color: #0050FF;
+}
+
+.navbar .blue-square {
+  background-color: #0050FF;
+  padding: 10px;
+  margin-left: 10px;
+}
+
+.navbar .square-highlight{
+  background-color: #0050FF;
+  width: 20px;
+  height: 20px;
+  margin-left: 50px;
+}
+
+.navbar .name {
+  font-size: 20px;
+  margin: 0px;
+  margin-left: 10px;
+  padding: 0px;
+  font-weight: bold;
+}
+.navbar .name:hover {
+  color: #000000;
+}
+.navbar .title {
+  font-size: 14px;
+  margin:0px;
+}
+.navbar .title:hover {
+  color: #000000;
+}
 
 .navbar li {
   display: inline;
   background-color: #ffffff;
-}
-
-.navbar .navbar-logo{
-  padding: 20px 0px;
 }
 
 @media screen and (max-width: 440px) {
