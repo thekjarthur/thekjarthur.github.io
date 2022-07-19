@@ -12,7 +12,7 @@ cursor: pointer; padding: 14px 16px; transition: 0.3s; font-size: 17px;}
     /*background: #fff;*/
     color: #404040;
     /*margin: -19px auto;*/
-    margin: auto;
-    width: 760px;
+    /*margin: auto;*/
+    max-width: 760px;
     padding: 20px;
 }

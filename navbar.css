@@ -5,10 +5,10 @@
   text-align: center;
   height: auto;
   margin-bottom: 30px;
-  position: fixed; /* Set the navbar to fixed position */
-  top: 0; /* Position the navbar at the top of the page */
-  width: 100%; /* Full width */
-  z-index:1; /*Add this*/
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index:1;
 }
 
 .navbar ul {
@@ -68,22 +68,21 @@
 }
 
 .navbar li {
-  display: inline;
+  display: inline-block;
   background-color: #ffffff;
 }
 
-@media screen and (max-width: 440px) {
-  .navbar a {
-    float: none;
-    width: 100%;
-    margin: 0px;
-    display: block;
-  }
-  .navbar a:hover {
-    border-style: none;
-    border-width: 0px;
-  }
-  .navbar ul {
-    padding-bottom: 0px;
-  }
+@media (max-width: 450px) {
+  .navbar li {display: block;}
+  .navbar ul {text-align: center;}
 }
+
+/*@media only screen and (max-width: 450px) {
+  .navbar a {
+    font-size: 8px;
+  }  
+}*/
+
+/*@media screen and (max-width: 600px) {
+  .navbar a:not(:first-child) {display: none;}
+}*/

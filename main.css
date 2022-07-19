@@ -138,6 +138,9 @@ body {
 @media (max-width: 900px) {
   .content {flex-direction: column-reverse; text-align: center;}
   .home-container {flex-direction: column-reverse;}
-  .text-container {flex-basis: unset; text-align: center;}
+  .text-container {flex-basis: unset; text-align: center; padding: 0px;}
   .image-container {flex-basis: unset;margin: auto;}
 }
+
+
+@media (max-width: 450px) {body {padding-top: 180px;}}
