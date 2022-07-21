@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+    />
+    <link rel="stylesheet" href="../navbar.css" />
+    <link rel="stylesheet" href="../footer.css" />
+    <link rel="stylesheet" href="../projects.css" />
+    <link rel="stylesheet" href="../main.css" />
+    <link rel="stylesheet" href="./project-styles.css"/>
+    <link rel="stylesheet" href="./tabs.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Projects | Kwabena Arthur</title>
+  </head>
+
+  <body>
+    <div class="navbar">
+      <ul>
+        <li style="float:left;"><div class="square-highlight"></div></li>
+        <li style="float:left;">
+          <a href="../index.html" class="name" style="font-weight: bold;">Kwabena Arthur</a>
+          <a href="../index.html" class="title">/ Mechanical Engineer</a>
+        </li>
+        <li><a href="../index.html">ABOUT ME</a></li>
+        <li><a class="active" href="../projects.html">MECHE</a></li>
+        <li><a href="../publications.html">AI+ML</a></li>
+        <li><a href="../resume_kwabenaarthur.pdf">RESUME</a></li>
+      </ul>
+    </div>
+<div class="content">
+<div class="project-container flex-column">
+<h1>Sonic Screwdriver</h1>
+<h4>(WORK IN PROGRESS)</h4>
+<p>
+  My current project is creating a sonic screwdriver, inspired by the
+  device (of the same name) in Doctor Who.
+</p>
+<img src="././../old/images/ss1.png"/>
+<p>
+  The goal is to have a pocket sized device with a wide array of sensors
+  and effectors, allowing different functions to be programmed into the
+  device. The PCB was designed in KiCAD, and fabricated by OSHPark. The
+  case was designed in Onshape, to be 3d printed. Several openings along
+  the case allow for the sensors to be properly exposed.
+</p>
+
+  <div class="tab">
+    <button class="tablinks" onclick="openTab(event, 'Alpha Prototype')" id="defaultOpen">α Prototype</button>
+    <button class="tablinks" onclick="openTab(event, 'IMU Pen')">IMU Pen</button>
+    <button class="tablinks" onclick="openTab(event, 'Beta Prototype')">β Prototype</button>
+  </div>
+
+  <div id="Alpha Prototype" class="tabcontent" style="text-align: left;"> 
+    <span onclick="this.parentElement.style.display='none'" class="top-right">x</span>
+    <h3>Alpha Prototype</h3>
+    <p>First prototype with the functions - The development blog is documented on <a href="https://hackaday.io/project/179292/logs">Hackaday</a>.</p>
+    <h4>Display and Menu</h4>
+    <p>I used a webpage that allowed pixel level drawings to be turned into bitmap arrays that can easily be stored.</p>
+    <img src="https://cdn.hackaday.io/images/2876721618971713460.png">
+    <img src="https://cdn.hackaday.io/images/9301821618972069733.jpg" style="width: 46%;">
+    <img src="https://cdn.hackaday.io/images/5085991618972067745.jpg" style="width: 46%;">
+
+    <h4>CAD and Enclosure</h4>
+    <p>While I wait for the electronics to arrived, I decided to start working on the enclosure. The internal volume is similar to the final version of the SS. </p>
+    <img src="https://cdn.hackaday.io/images/6642331619872810324.png" style="width: 46%;">
+    <img src="https://cdn.hackaday.io/images/3578271619873042661.jpg" style="width: 46%;">
+
+    <h4>Testing Modules</h4>
+    <p>The first round of ordered modules arrived from Digikey, and I spent the better part of the weekend testing their functionality. Most of the tests I ran on the modules were simple call-and-response, or sensor reading.  I discovered a website (Tinycircuits.com) which sold, unsurprisingly, tiny circuits. These are perfect for a space limited project.</p>
+
+    <h4>Putting Everything Together</h4>
+    <p>Assembled modules and wired on protoshield.</p>
+    <img src="https://cdn.hackaday.io/images/6921371620857975302.jpg" style="width: 46%;">
+    <img src="https://cdn.hackaday.io/images/7454071620858021630.jpg" style="width: 46%;">
+
+
+    <h4>Testing function menu</h4>
+    <p>Tested the "tier-1" functions of the SS, which largely comprises of scientific modules. Here's a list of modules tested, and their basic functions added:</p>
+    <ul>
+      <li>IMU (accelerometer, gyroscope, magnetometer)</li>
+      <li>Hygrometer</li>
+      <li>Barometer (and altimeter)</li>
+      <li>Thermometer (IR and ambient)</li>
+      <li>RGB Led</li>
+      <li>IR Led (and receiver)</li>
+      <li>Radio Module</li>
+      <li>Wifi Module</li>
+    </ul>
+    <img src="https://cdn.hackaday.io/images/7871301621620017169.png" style="width: 100%;">
+    <img src="https://cdn.hackaday.io/images/3666161621620114600.jpg" style="width: 48%;">
+    <img src="https://cdn.hackaday.io/images/6072221621620244237.jpg" style="width: 48%;">
+    <img src="https://cdn.hackaday.io/images/6877991621620253875.jpg" style="width: 48%;">
+
+    <h4>Shuffling Functions Around</h4>
+    <p>I decided to shuffle the functions slightly. There are a lot of basic / measurement functions on the SS, that are useful, though not all the time. Some of the functions will need additional hardware not yet purchased (e.g. C12666MA Spectrometer, or a GPS module), but I've included them for completeness sake. Here's the current break down of functions I've added:</p>
+    <img src="../images/ss_funcs.png">
+    <ol>
+      <li> Pen. Still not sure what the best approach is in this case. ML models aren't supported a ATSAMD21. Other ideas like Hopfield Networks could work be implemented, though they are significantly limited in terms of memory. I could also offload the identification / classification to a server, and just have the SS record the pen strokes, but this is less fun. </li>
+      <li>Analog Broadcast. I saw a video where an ESP8266 was used to broadcast analog tv. Might try something like that.  </li>
+      <li>Smart Home. Connecting the SS to other appliances at home, possibly using wifi router signals as positioning beacons. </li>
+    </ol>
+  </div>
+
+  <div id="IMU Pen" class="tabcontent" style="text-align: left;"> 
+    <span onclick="this.parentElement.style.display='none'" class="top-right">x</span>
+    <h3>IMU Pen</h3>
+    <p>
+      IThis was a submodule is part of the sonic screwdriver project. The sonic screwdriver will have a pen function, that can be used on any surface, recording IMU data, that will immediately be turned into alphabets. The prototype below was made to collect data.
+      <div class="flex-row">
+        <img src="./../images/assets/imup/imup_ee_me.png" style="max-width: 100%;"/>
+      </div>
+      The core electronics of the prototype are the same as for the sonic screwdriver. For collecting data, I used miniature modules from TinyCircuits. 
+      <div class="flex-row">
+        <img src="./../images/assets/imup/imup_visualization.gif" style="max-width: 45%;"/>
+      </div>
+    </p>
+
+    <h4>Data</h4>
+    <p>
+      The pen collects motion data from the 9-axis module (accelerometer, gyroscope, magnetometer), and uploads them. The data can then be downloaded and used to train a machine learning model to determine the letter being written from the motion data. The motion data for the letter "a" is shown:
+      <div class="flex-row">
+        <img src="./../images/assets/imup/imup_motiona.png" style="max-width: 100%"/>
+      </div>
+      Rather than collect 1000s of examples, I opted to first use a combination of unsupervised learning methods, and a priori knowledge on letters for classify motion into alphabets. For aprior knowledge, I first analyzed the use of dashes and dots, and investigated the length (of time) used in writting different letters.
+      <div class="flex-row">
+        <img src="./../images/assets/imup/imup_time.png" style="max-width: 80%">
+      </div>
+      I investiagted how the rate of writing affected the quality of motion data. There was ample repeatability when written at different rates. This means there is less of a concern about how quickly letters are written, since the motion would still remain representative of the letter once normalized.
+      <div class="flex-row">
+        <img src="./../images/assets/imup/imup_writing_speed_plots.png" style="max-width: 80%">
+      </div>
+    </p>
+
+    <h5>Unsupervised Learning</h5>
+    <p>
+      t-stochastic neigheborhood embeddings (tSNE) was used to learn latent structures in the data space of all recorded motion. Three letters that are similar (a, d, and g) are shown below. In the plots, show that they are similar (grouped nearby), but distinct enough that they are clustered seperately.
+      <div class="flex-row">
+        <img src="./../images/assets/imup/imup_tsne_adg.png" style="max-width: 80%">
+      </div>
+      The remaining letters (excluding letters involving dots and dashes) are shown below. The distinctive clustering shows that there are latent structures in our data. Thus, a trained DNN model will be able to extract the correct letter from the motion data.
+      <div class="flex-row">
+        <img src="./../images/assets/imup/imup_tsne_letters.png" style="max-width: 100%">
+      </div>
+    </p>
+  </div>
+
+  <div id="Beta Prototype" class="tabcontent" style="text-align: left;"> 
+    <span onclick="this.parentElement.style.display='none'" class="top-right">x</span>
+    <p>
+      The final PCB board is generated with KiCAD again, and fabricated at OshPark.
+    </p>
+    <img src="../images/ss_schematic.png">
+    <img src="../images/ss_trace_layout.png">
+    <img src="../images/ss_board.png">
+    <!-- <img src="././../old/images/ss3.png" style="max-width: 500px" /> -->
+      <p>
+        PCB Schematic rev. 3, KiCad. Originally planned to use the ARM Cortex
+        M0+ microcontroller (similar mcu to Arduino Zero's).
+      </p>
+      <img src="./../images/ss_reflow_oven.png" style="max-width: 45%;" />
+      <img src="./../images/ss_reflow_oven_2.png" style="max-width: 45%;" />
+      <p>
+        Repurposed "reflow oven". Marked improvement from the frying pan
+        model.
+      </p>
+      <img src="./../images/ss_pcb_close.JPG" style="max-width: 45%;" />
+      <img src="././../old/images/ss2.png" style="max-width: 45%;" />
+      <p>
+        Populated PCB solder in reflow oven; remaining will be hand-soldered. 
+        I replaced the ESP8266 with the more robust ESP-12S in this revision.
+        This is especially useful for adding new functions over wifi and
+        planned communication with the Raspberry Pi server.
+      </p>
+  </div>
+
+  <script>
+  function openTab(event, section){
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i=0; i < tabcontent.length; i++) {tabcontent[i].style.display = "none";}
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i=0; i < tablinks.length; i++) {tablinks[i].className=tablinks[i].className.replace(" active", "");}
+    document.getElementById(section).style.display = "block";
+    evt.currentTarget.className += "active";}
+  document.getElementById("defaultOpen").click();
+  </script>
+
+  <p>The blog is continued on <a href="https://hackaday.io/project/179292/logs">Hackaday</a>.</p>
+</div>
+</div>
+
+<div class="footer">
+  <ol>
+    <li><a style="font-weight: bold;">Call</a>
+      <br><a>+1-617-800-6842</a>
+    </li>
+
+    <li><a style="font-weight: bold;">Email</a>
+      <br><a>thekjarthur@gmail.com</a>
+    </li>
+
+    <li><a style="font-weight: bold;">Follow</a>
+      <br><a href="https://www.linkedin.com/in/kwabenaarthur/"><i class="fa fa-linkedin" style="color: black;"></i></a>
+    </li>
+  </ol>
+</div>
+
+  </body>
+</html>
