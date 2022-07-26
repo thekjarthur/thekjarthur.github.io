@@ -65,7 +65,7 @@
     <img src="https://cdn.hackaday.io/images/5085991618972067745.jpg" style="width: 46%;">
 
     <h4>CAD and Enclosure</h4>
-    <p>While I wait for the electronics to arrived, I decided to start working on the enclosure. The internal volume is similar to the final version of the SS. </p>
+    <p>While I waited for the electronics to arrived, I decided to start working on the enclosure. The internal volume is similar to the final version of the SS. </p>
     <img src="https://cdn.hackaday.io/images/6642331619872810324.png" style="width: 46%;">
     <img src="https://cdn.hackaday.io/images/3578271619873042661.jpg" style="width: 46%;">
 
@@ -99,9 +99,9 @@
     <p>I decided to shuffle the functions slightly. There are a lot of basic / measurement functions on the SS, that are useful, though not all the time. Some of the functions will need additional hardware not yet purchased (e.g. C12666MA Spectrometer, or a GPS module), but I've included them for completeness sake. Here's the current break down of functions I've added:</p>
     <img src="../images/ss_funcs.png">
     <ol>
-      <li> Pen. Still not sure what the best approach is in this case. ML models aren't supported a ATSAMD21. Other ideas like Hopfield Networks could work be implemented, though they are significantly limited in terms of memory. I could also offload the identification / classification to a server, and just have the SS record the pen strokes, but this is less fun. </li>
-      <li>Analog Broadcast. I saw a video where an ESP8266 was used to broadcast analog tv. Might try something like that.  </li>
-      <li>Smart Home. Connecting the SS to other appliances at home, possibly using wifi router signals as positioning beacons. </li>
+      <li> Pen. Still not sure what the best approach is in this case. ML models are too hungry for the ATSAMD21. Other ideas like Hopfield Networks could work be implemented, though they are significantly limited in terms of memory. I could also offload the identification / classification to a server, and just have the SS record the pen strokes, but this is less fun. </li>
+      <li>Analog Broadcast. The ESP8266 can be severly overclocked to transmit analog TV signal. I swapped to a TI wifi module instead, so would likely have to scrap this function.</li>
+      <li>Smart Home. Connecting the SS to other projects at home. I can use the wifi router and compass to localize the sonic - I can trigger different projects by pointing at them. </li>
     </ol>
   </div>
 
@@ -109,7 +109,7 @@
     <span onclick="this.parentElement.style.display='none'" class="top-right">x</span>
     <h3>IMU Pen</h3>
     <p>
-      IThis was a submodule is part of the sonic screwdriver project. The sonic screwdriver will have a pen function, that can be used on any surface, recording IMU data, that will immediately be turned into alphabets. The prototype below was made to collect data.
+      This was a submodule is part of the sonic screwdriver project. The sonic screwdriver will have a pen function, that can be used on any surface, recording IMU data, that will immediately be turned into alphabets. The prototype below was made to collect data.
       <div class="flex-row">
         <img src="./../images/assets/imup/imup_ee_me.png" style="max-width: 100%;"/>
       </div>
